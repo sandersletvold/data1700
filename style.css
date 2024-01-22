@@ -1,7 +1,7 @@
 /* Generell styling */
 .wrapper {
     display: grid;
-    grid-template-columns: 20vw 40vw 40vw;
+    grid-template-columns: 20vw 80vw;
     grid-auto-rows: minmax(100px, auto);
 }
 .navigasjon {
