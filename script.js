@@ -47,6 +47,27 @@ function javascript1oppg10() {
 
 
 /* UKESOPPGAVER JAVASCRIPT 2 */
+// Oppgave personregister
+function visPersonRegister() {
+    const personregister = [];
+    const javascript2person1 = {
+        navn : "Line Jensen",
+        adresse : "Askerveien 82",
+        telefonnr : "12334455"
+    };
+    personregister.push(javascript2person1);
+    const javascript2person2 = {
+        navn : "Ole Hansen",
+        adresse : "Osloveien 82",
+        telefonnr: "99887766"
+    };
+    personregister.push(javascript2person2);
+}
+
+let javascript2ut = "<table> + <tr>" +
+    "<th>Navn</th><th>Adresse</th><th>Telefonnummer</th>" +
+    "</tr>";
+
 
 
 /* UKESOPPGAVER JAVASCRIPT 3 */
