@@ -55,13 +55,13 @@ function javascript2oppg1() {
         adresse : "Askerveien 82",
         telefonnr : 12334455
     }
-    personregister[0] = person1;
+    personregister.push(person1);
     const person2 = {
         navn : "Ole Hansen",
         adresse: "Osloveien 82",
         telefonnr : 99887766
     }
-    personregister[1] = person2;
+    personregister.push(person2);
 
     let javascript2oppg1ut = "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
@@ -71,6 +71,7 @@ function javascript2oppg1() {
         javascript2oppg1ut += "<td>"+personregister[i].navn+"</td><td>"+personregister[i].adresse+"</td><td>"+personregister[i].telefonnr;
         javascript2oppg1ut += "</tr>";
     }
+    javascript2oppg1ut += "</table>";
     document.getElementById("test").innerHTML = javascript2oppg1ut;
 }
 
