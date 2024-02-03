@@ -1,0 +1,55 @@
+// Oppgave 1
+function javascript1oppg1() {
+    document.write("Hallo verden!");
+}
+
+// Oppgave 2
+function javascript1oppg2() {
+    alert("Hallo verden!");
+}
+
+// Oppgave 3
+function javascript1oppg3(innlestData) {
+    document.write(innlestData);
+}
+
+// Oppgave 4
+function javascript1oppg4(innlestData) {
+    alert(innlestData);
+}
+
+// Oppgave 5
+function javascript1oppg5(innlestData) {
+    console.log(innlestData);
+}
+
+// Oppgave 6
+function javascript1oppg6(innlestData) {
+    innlestData = innlestData.fontcolor("blue");
+    document.write(innlestData);
+}
+
+// Oppgave 7
+function javascript1oppg7(innlestData) {
+    innlestData = innlestData.toUpperCase();
+    alert(innlestData);
+}
+
+// Oppgave 8
+function javascript1oppg8() {
+    const teller = 1;
+    console.log(teller);
+}
+
+// Oppgave 9
+let javascript1teller = 0;
+
+function javascript1oppg9() {
+    javascript1teller += 1;
+    console.log(javascript1teller);
+}
+
+// Oppgave 10
+function javascript1oppg10() {
+    console.log("Du trykket på oppgave 9 knappen " + javascript1teller + " ganger");
+}
