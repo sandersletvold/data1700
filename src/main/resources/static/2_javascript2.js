@@ -13,7 +13,6 @@ function javascript2oppg1() {
         telefonnr: 99887766
     }
     personregister.push(person2);
-
     let javascript2oppg1ut = "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
         "</tr>";
