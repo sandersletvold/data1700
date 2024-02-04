@@ -1,26 +1,44 @@
 // Oppgave personregister
-function javascript2oppg1() {
-    const personregister = [];
+const personRegister = [];
+
+function visRegister() {
     const person1 = {
-        navn: "Line Jensen",
-        adresse: "Askerveien 82",
-        telefonnr: 12334455
-    }
-    personregister.push(person1);
-    const person2 = {
         navn: "Ole Hansen",
         adresse: "Osloveien 82",
         telefonnr: 99887766
     }
-    personregister.push(person2);
-    let javascript2oppg1ut = "<table><tr>" +
+    const person2 = {
+        navn: "Line Jensen",
+        adresse: "Askerveien 82",
+        telefonnr: 12334455
+    }
+
+    personRegister.push(person1);
+    personRegister.push(person2);
+
+    let ut = "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
         "</tr>";
-    for (let i = 0; i < personregister.length; i++) {
-        javascript2oppg1ut += "<tr>";
-        javascript2oppg1ut += "<td>" + personregister[i].navn + "</td><td>" + personregister[i].adresse + "</td><td>" + personregister[i].telefonnr;
-        javascript2oppg1ut += "</tr>";
+    for (let i = 0; i < personRegister.length; i++) {
+        ut += "<tr>";
+        ut += "<td>" + personRegister[i].navn + "</td><td>" + personRegister[i].adresse + "</td><td>" + personRegister[i].telefonnr;
+        ut += "</tr>";
     }
-    javascript2oppg1ut += "</table>";
-    document.getElementById("test").innerHTML = javascript2oppg1ut;
+    ut += "</table>";
+    document.getElementById("register").innerHTML = ut;
+}
+
+// Oppgave 1
+function leggTilPerson() {
+    const person3 = {
+        navn : "Per Nilsen",
+        adresse : "Storgata 6",
+        telefonnr : 19283746
+    }
+    personRegister.push(person3);
+}
+
+// Oppgave 2
+function sorterRegister() {
+    personRegister.sort();
 }
