@@ -52,6 +52,36 @@
         <button onclick="visNavn()">Vis navn og alder</button>
         <p id="personalia"></p>
 
+        <h2 class="underoverskrift">Oppgave 2</h2>
+        <input id="innCelsius" type="number" placeholder="Celsius" onchange="tilFahrenheiht()">
+        <br><br>
+        <input id="innFahrenheiht" type="number" placeholder="Fahrenheiht" onchange="tilCelsius()">
+        <br><br>
+
+        <h2 class="underoverskrift">Oppgave 3</h2>
+        <input id="tall" type="text" placeholder="Skriv tall inn her" onchange="registrerTall()">
+        <button id="regnUt" onclick="utregning()">=</button>
+        <br><br>
+        <button id="addisjon" onclick="addisjonTegn()">+</button>
+        <button id="subtraksjon" onclick="subtraksjonsTegn()">-</button>
+        <button id="multiplikasjon" onclick="multiplikasjonsTegn()">*</button>
+        <button id="divisjon" onclick="divisjonTegn()">/</button>
+        <button id="modulus" onclick="modulusTegn()">%</button>
+        <br>
+        <p id="regnestykke"></p>
+        <p id="resultat"></p>
+        <br><br>
+
+        <h2 class="underoverskrift">Oppgave 4</h2>
+        <input id="innNavn" type="text" placeholder="Navn">
+        <input id="innAdresse" type="text" placeholder="Adresse">
+        <input id="innTelefonnr" type="text" placeholder="Telefonnr">
+        <input id="innFodselsnr" type="text" placeholder="Fødselsnr">
+        <br><br>
+        <button onclick="registrer()">Registrer person</button>
+        <button onclick="skrivUtRegister()">Se personregister</button>
+        <p id="nyttRegister"></p>
+
         <br><br><br>
         <h1 class="hovedoverskrift">Ekstraoppgaver</h1>
     </div>
