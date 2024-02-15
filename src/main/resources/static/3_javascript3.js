@@ -124,3 +124,24 @@ function skrivUtRegister() {
     ut += "</table>";
     document.getElementById("nyttRegister").innerHTML = ut;
 }
+
+// Ekstraoppgave 1 og 2
+let boxNr = 0;
+let gjoremal = "";
+function leggTiliToDo() {
+    gjoremal = document.getElementById("todoInput").value;
+    document.getElementById("todoListe").insertAdjacentHTML('beforeend', "<li>" + gjoremal + "<input id='" + boxNr + "' type='checkbox' onchange='flyttElement(this)'>" + "</li>");
+    document.getElementById("todoInput").value = "";
+    boxNr++;
+}
+
+function flyttElement(box) {
+    let oppgaveElemenet = box.parentElement;
+    if (box.checked) {
+        oppgaveElemenet.remove();
+        document.getElementById("toDoListeFerdig").appendChild(oppgaveElemenet);
+    } else {
+        oppgaveElemenet.remove();
+        document.getElementById("todoListe").appendChild(oppgaveElemenet);
+    }
+}
