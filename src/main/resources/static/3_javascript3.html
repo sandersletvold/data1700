@@ -84,7 +84,7 @@
 
         <br><br><br>
         <h1 class="hovedoverskrift">Ekstraoppgaver</h1>
-        <h2 class="underoverskrift">Ekstraoppgave 1</h2>
+        <h2 class="underoverskrift">Ekstraoppgave 1 og 2</h2>
         <label for="todoInput">
             <input id="todoInput" type="text" placeholder="Legg til ting som må gjøres" onchange="leggTiliToDo()">
         </label>
@@ -93,9 +93,14 @@
 
         </ul>
         <p class="informasjon">Liste over ting som er gjort</p>
-        <ul id="toDoListeFerdig">
+        <ul id="toDoListeFerdig" style="text-decoration: line-through">
 
         </ul>
+
+        <br><br>
+        <h2 class="underoverskrift">Ekstraoppgave 3</h2>
+        <button onclick="skrivUtOppgaver()">Ta test!</button>
+        <ul id="liste"></ul>
     </div>
 </main>
 </body>

@@ -145,3 +145,41 @@ function flyttElement(box) {
         document.getElementById("todoListe").appendChild(oppgaveElemenet);
     }
 }
+
+// Ekstraoppgave 3
+function skrivUtOppgaver() {
+    const liste = document.getElementById('liste');
+    const oppgaver = [];
+
+    const oppgave1 = {
+        sporsmol: "Når er frist for oblig 1?",
+        alternativer: ['1. Februar', '6. Februar', '12. Februar'],
+        riktigIndex: 2
+    };
+
+    const oppgave2 = {
+        sporsmol: "Hvor mange obliger er det i dette faget?",
+        alternativer: ['3', '5', 'ingen', '2'],
+        riktigIndex: 0
+    };
+
+    const oppgave3 = {
+        sporsmol: "Hva står API for?",
+        alternativer: ['App Program Instruction', 'Application Programming Interface', 'Det er ikke en forkortelse'],
+        riktigIndex: 1
+    };
+
+    oppgaver.push(oppgave1);
+    oppgaver.push(oppgave2);
+    oppgaver.push(oppgave3);
+
+    let ut = "";
+    let id = 0;
+    for (let i of oppgaver) {
+        ut += "<li><h3>"+i.sporsmol+"</h3></li>";
+        for (let j of i.alternativer) {
+            ut += "<li>"+j+"<label for='"+id+"'><input id='"+id+"' type='radio'>";
+        }
+    }
+    document.getElementById("liste").innerHTML = ut;
+}
