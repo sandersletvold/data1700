@@ -147,39 +147,70 @@ function flyttElement(box) {
 }
 
 // Ekstraoppgave 3
+const liste = document.getElementById('liste');
+const oppgaver = [];
+
+const oppgave1 = {
+    sporsmol: "Når er frist for oblig 1?",
+    alternativer: ['1. Februar', '6. Februar', '12. Februar'],
+    riktigIndex: 2
+};
+
+const oppgave2 = {
+    sporsmol: "Hvor mange obliger er det i dette faget?",
+    alternativer: ['3', '5', 'ingen', '2'],
+    riktigIndex: 0
+};
+
+const oppgave3 = {
+    sporsmol: "Hva står API for?",
+    alternativer: ['App Program Instruction', 'Application Programming Interface', 'Det er ikke en forkortelse'],
+    riktigIndex: 1
+};
+
+oppgaver.push(oppgave1);
+oppgaver.push(oppgave2);
+oppgaver.push(oppgave3);
+
 function skrivUtOppgaver() {
-    const liste = document.getElementById('liste');
-    const oppgaver = [];
-
-    const oppgave1 = {
-        sporsmol: "Når er frist for oblig 1?",
-        alternativer: ['1. Februar', '6. Februar', '12. Februar'],
-        riktigIndex: 2
-    };
-
-    const oppgave2 = {
-        sporsmol: "Hvor mange obliger er det i dette faget?",
-        alternativer: ['3', '5', 'ingen', '2'],
-        riktigIndex: 0
-    };
-
-    const oppgave3 = {
-        sporsmol: "Hva står API for?",
-        alternativer: ['App Program Instruction', 'Application Programming Interface', 'Det er ikke en forkortelse'],
-        riktigIndex: 1
-    };
-
-    oppgaver.push(oppgave1);
-    oppgaver.push(oppgave2);
-    oppgaver.push(oppgave3);
-
     let ut = "";
     let id = 0;
+    let oppgaveIndex = 0;
     for (let i of oppgaver) {
         ut += "<li><h3>"+i.sporsmol+"</h3></li>";
         for (let j of i.alternativer) {
-            ut += "<li>"+j+"<label for='"+id+"'><input id='"+id+"' type='radio'>";
+            id++;
+            ut += "<li>"+j+"<label for='"+id+"'><input id='"+id+"' type='radio' value='"+j+"' name='oppgave"+oppgaveIndex+"'>";
         }
     }
+    oppgaveIndex++;
     document.getElementById("liste").innerHTML = ut;
+}
+
+function sjekkSvar() {
+    let riktigeSvar = 0;
+    for (let oppgaveIndex = 0; oppgaveIndex < oppgaver.length; oppgaveIndex++) {
+        const radioKnapper = document.querySelectorAll('[name="oppgave' + oppgaveIndex + '"]');
+        let svar = "";
+        for (let alternativ of radioKnapper) {
+            if (alternativ.checked) {
+                svar = alternativ.value;
+                break;
+            }
+        }
+        if (sjekkOmRiktig(oppgaveIndex, svar)) {
+            riktigeSvar++;
+        }
+    }
+    liste.innerHTML = '';
+    alert(riktigeSvar + " av " + oppgaver.length + " oppgaver er riktige");
+}
+
+function sjekkOmRiktig(oppgaveIndex, svar) {
+    const oppgave = oppgaver[oppgaveIndex];
+    if (oppgave.riktigIndex === oppgave.alternativer.indexOf(svar)) {
+        return true;
+    } else {
+        return false;
+    }
 }
