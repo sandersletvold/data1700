@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="4_jquery.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="4_jquery.js"></script>
 </head>
 <body class="wrapper">
 <header class="navigasjon">
@@ -38,10 +39,70 @@
 <main>
     <div class="oppgaver">
         <h1 class="hovedoverskrift">Ukesoppgaver jQuery</h1>
+
         <h2 class="underoverskrift">Oppgave 1</h2>
+        <p class="informasjon">Skriv inn navnet ditt</p>
+        <label>
+            <input type="text" id="navn" value="">
+        </label>
+        <p class="informasjon">Skriv inn aldern din</p>
+        <label>
+            <input type="text" id="alder" value="">
+        </label>
+        <br><br>
+        <button onclick="visNavn()">Vis navn og alder</button>
+        <p id="personalia"></p>
+
+        <h2 class="underoverskrift">Oppgave 2</h2>
+        <input id="innCelsius" type="number" placeholder="Celsius" onchange="tilFahrenheiht()">
+        <br><br>
+        <input id="innFahrenheiht" type="number" placeholder="Fahrenheiht" onchange="tilCelsius()">
+        <br><br>
+
+        <h2 class="underoverskrift">Oppgave 3</h2>
+        <input id="tall" type="text" placeholder="Skriv tall inn her" onchange="registrerTall()">
+        <button id="regnUt" onclick="utregning()">=</button>
+        <br><br>
+        <button id="addisjon" onclick="addisjonTegn()">+</button>
+        <button id="subtraksjon" onclick="subtraksjonsTegn()">-</button>
+        <button id="multiplikasjon" onclick="multiplikasjonsTegn()">*</button>
+        <button id="divisjon" onclick="divisjonTegn()">/</button>
+        <button id="modulus" onclick="modulusTegn()">%</button>
+        <br>
+        <p id="regnestykke"></p>
+        <p id="resultat"></p>
+        <br><br>
+
+        <h2 class="underoverskrift">Oppgave 4</h2>
+        <input id="innNavn" type="text" placeholder="Navn">
+        <input id="innAdresse" type="text" placeholder="Adresse">
+        <input id="innTelefonnr" type="text" placeholder="Telefonnr">
+        <input id="innFodselsnr" type="text" placeholder="Fødselsnr">
+        <br><br>
+        <button onclick="registrer()">Registrer person</button>
+        <button onclick="skrivUtRegister()">Se personregister</button>
+        <p id="nyttRegister"></p>
 
         <br><br><br>
         <h1 class="hovedoverskrift">Ekstraoppgaver</h1>
+        <h2 class="underoverskrift">Ekstraoppgave 1 og 2</h2>
+        <label for="todoInput">
+            <input id="todoInput" type="text" placeholder="Legg til ting som må gjøres" onchange="leggTiliToDo()">
+        </label>
+        <p class="informasjon">Liste over ting som må gjøres</p>
+        <ul id="todoListe">
+
+        </ul>
+        <p class="informasjon">Liste over ting som er gjort</p>
+        <ul id="toDoListeFerdig" style="text-decoration: line-through">
+
+        </ul>
+
+        <br><br>
+        <h2 class="underoverskrift">Ekstraoppgave 3</h2>
+        <button onclick="skrivUtOppgaver()">Ta test!</button>
+        <ul id="liste"></ul>
+        <button onclick="sjekkSvar()">Sjekk svar</button>
     </div>
 </main>
 </body>
