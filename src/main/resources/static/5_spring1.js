@@ -1,8 +1,15 @@
-$("#maaned").change(function() {
-    let month = $("#maaned").val();
+// Oppgave 1
+function hent(){
+    let month = $("#innMaaned").val();
 
-    $.get("http://localhost:8080/5_spring1", function(data){
-        let temp = "Temperaturen i " + month.toLowerCase() + " er " + data + " grader C.";
+    let url = "/innMaaned?month=" + month
+
+    //Henter temperatur fra serveren ved å bruke jquery
+    $.get(url, function(data){
+        let temp = "Temperaturen i " + month.toLowerCase() + " er " + data + " grader C."
+
         $("#temp").html(temp);
-    });
-});
+    })
+}
+
+// Oppgave 2

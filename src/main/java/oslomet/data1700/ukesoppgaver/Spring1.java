@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Spring1Temp {
+public class Spring1 {
     private final Integer[] tempArray = new Integer[]{-3,-2,2,7,12,16,18,17,12,7,3,-2};
 
-    @GetMapping("/maaned")
+    @GetMapping("/innMaaned")
     public int tempRegister(String month) {
         return switch (month) {
             case "Januar" -> tempArray[0];
