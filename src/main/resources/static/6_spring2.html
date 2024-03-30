@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="6_spring2.js" type="application/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body class="wrapper">
 <header class="navigasjon">
@@ -38,10 +39,33 @@
 <main>
     <div class="oppgaver">
         <h1 class="hovedoverskrift">Ukesoppgaver Spring 2</h1>
-        <h2 class="underoverskrift">Oppgave 1</h2>
-
-        <br><br><br>
-        <h1 class="hovedoverskrift">Ekstraoppgaver</h1>
+        <h2 class="underoverskrift">Motorvognoppgave</h2>
+        <table>
+            <tr>
+                <td>Eiers personnummer</td>
+                <td>Eiers navn</td>
+                <td>Eiers adresse</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="personnummer"></td>
+                <td><input type="text" id="navn"></td>
+                <td><input type="text" id="adresse"></td>
+            </tr>
+            <tr>
+                <td>Kjennetegn</td>
+                <td>Bilmerke</td>
+                <td>Biltype</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="kjennetegn"></td>
+                <td><input type="text" id="merke"></td>
+                <td><input type="text" id="type"></td>
+            </tr>
+        </table>
+        <br>
+        <button onclick="registrer()">Registrer</button>
+        <p id="bilregister"></p>
+        <button onclick="slett()">Slett alle</button>
     </div>
 </main>
 </body>

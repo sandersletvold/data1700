@@ -25,4 +25,6 @@ public class Spring1 {
             default -> 0;
         };
     }
+
+
 }
