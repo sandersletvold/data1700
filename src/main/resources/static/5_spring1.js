@@ -1,15 +1,14 @@
 // Oppgave 1
-function hent(){
-    let month = $("#innMaaned").val();
-
-    let url = "/innMaaned?month=" + month
+function hentTemp() {
+    let maaned = $("#innMaaned").val();
+    let url = "/tempRegister?maaned=" + maaned;
 
     //Henter temperatur fra serveren ved å bruke jquery
     $.get(url, function(data){
-        let temp = "Temperaturen i " + month.toLowerCase() + " er " + data + " grader C."
+        let temp = "Temperaturen i " + maaned.toLowerCase() + " er " + data + " grader C."
 
-        $("#temp").html(temp);
-    })
+        $("#tempFelt").html(temp);
+    });
 }
 
 // Oppgave 2

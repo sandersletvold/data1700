@@ -40,11 +40,11 @@
     <div class="oppgaver">
         <h1 class="hovedoverskrift">Ukesoppgaver Spring 1</h1>
         <h2 class="underoverskrift">Oppgave 1</h2>
-        <input type="text" placeholder="Månedsnavn" id="innMaaned">
-        <button id="hentTemp" onclick="hent()">Hent temperatur</button>
-        <p id="temp"></p>
-        <br><br><br>
-        <h1 class="hovedoverskrift">Ekstraoppgaver</h1>
+        <label for="innMaaned">
+            <input id="innMaaned" type="text">
+        </label>
+        <button id="tempSok" onclick="hentTemp()">Søk etter temperatur</button>
+        <p id="tempFelt"></p>
     </div>
 </main>
 </body>
