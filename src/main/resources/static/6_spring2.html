@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="6_spring2.js" type="application/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body class="wrapper">
 <header class="navigasjon">
@@ -37,35 +38,55 @@
     </nav>
 </header>
 <main>
-    <div class="oppgaver">
-        <h1 class="hovedoverskrift">Ukesoppgaver Spring 2</h1>
-        <h2 class="underoverskrift">Motorvognoppgave</h2>
-        <table>
-            <tr>
-                <td>Eiers personnummer</td>
-                <td>Eiers navn</td>
-                <td>Eiers adresse</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="personnummer"></td>
-                <td><input type="text" id="navn"></td>
-                <td><input type="text" id="adresse"></td>
-            </tr>
-            <tr>
-                <td>Kjennetegn</td>
-                <td>Bilmerke</td>
-                <td>Biltype</td>
-            </tr>
-            <tr>
-                <td><input type="text" id="kjennetegn"></td>
-                <td><input type="text" id="merke"></td>
-                <td><input type="text" id="type"></td>
-            </tr>
-        </table>
-        <br>
-        <button onclick="registrer()">Registrer</button>
-        <p id="bilregister"></p>
-        <button onclick="slett()">Slett alle</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h1 class="hovedoverskrift">Ukesoppgaver Spring 2</h1>
+                <h2 class="underoverskrift">Motorvognoppgave</h2>
+                <table class="table">
+                    <tr class="active"><th>Eiers personnummer</th></tr>
+                    <tr><td><input type="text" id="personnummer" class="form-control"></td></tr>
+
+                    <tr class="active"><th>Eiers navn</th></tr>
+                    <tr><td><input type="text" id="navn" class="form-control"></td></tr>
+
+                    <tr class="active"><th>Eiers adresse</th></tr>
+                    <tr><td><input type="text" id="adresse" class="form-control"></td></tr>
+
+                    <tr class="active"><th>Reg nummer</th></tr>
+                    <tr><td><input type="text" id="kjennetegn" class="form-control"></td></tr>
+
+                    <!--<tr class="active"><th>Bilmerke</th></tr>
+                    <tr><td><input type="text" id="merke" class="form-control"></td></tr>-->
+
+                    <tr class="active"><th>Bilmerke</th></tr>
+                    <tr><td><select type="text" id="merke" class="form-control" onclick="merkeSjekk()">
+                        <option id="standard"></option>
+                        <option id="audi" onclick="merkeSjekk()">Audi</option>
+                        <option id="bmw">BMW</option>
+                        <option id="mercedes">Mercedes</option>
+                        <option id="volkswagen">Volkswagen</option>
+                        <option id="skoda">Skoda</option>
+                    </select></td></tr>
+
+                    <tr class="active"><th>Biltype</th></tr>
+                    <tr><td><select type="text" id="type" class="form-control">
+                        <option id="standardtype"></option>
+                        <option id="type1"></option>
+                        <option id="type2"></option>
+                        <option id="type3"></option>
+                        <option id="type4"></option>
+                        <option id="type5"></option>
+                    </select></td></tr>
+                </table>
+                <button onclick="registrer()" class="btn btn-primary">Registrer</button>
+            </div>
+            <div class="col-md-5">
+                <h2 class="underoverskrift">Bilregister</h2>
+                <p id="bilregister"></p>
+                <button onclick="slett()" class="btn btn-danger">Slett alle</button>
+            </div>
+        </div>
     </div>
 </main>
 </body>
