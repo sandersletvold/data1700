@@ -1,7 +1,15 @@
 package oslomet.data1700.ukesoppgaver;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "motorvogn")
 public class Spring2Motorvogn {
-    // Deklarerer variabler
+    @Id
+    @GeneratedValue
     private String personnummer;
     private String navn;
     private String adresse;
@@ -9,7 +17,6 @@ public class Spring2Motorvogn {
     private String merke;
     private String type;
 
-    // Konstruktør
     public Spring2Motorvogn(String personnummer, String navn, String adresse, String kjennetegn, String merke, String type) {
         this.personnummer = personnummer;
         this.navn = navn;
@@ -19,12 +26,10 @@ public class Spring2Motorvogn {
         this.type = type;
     }
 
-    // Tom konstruktør
     public Spring2Motorvogn() {
 
     }
 
-    // Getter og setter metoder for variablene
     public String getPersonnummer() {
         return personnummer;
     }

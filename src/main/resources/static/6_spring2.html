@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <script src="6_spring2.js" type="application/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<body class="wrapper">
-<header class="navigasjon">
-    <nav>
-        <ol>
-            <h2 class="underoverskrift">Navigasjon</h2>
+<body>
+<header>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <h2>DATA1700 - Webprogrammering</h2>
             <li><a href="1_javascript1.html">JavaScript 1</a></li>
             <li><a href="2_javascript2.html">JavaScript 2</a></li>
             <li><a href="3_javascript3.html">JavaScript 3</a></li>
             <li><a href="4_jquery.html">jQuery</a></li>
             <li><a href="5_spring1.html">Spring 1</a></li>
-            <li><a href="6_spring2.html">Spring 2</a></li>
-            <li><a href="7_bootstrap.html">Bootstrap</a></li>
-            <li><a href="8_nedtrekkslister.html">Nedtrekkslister</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="6_spring2.html">Spring 2</a></li>
+            <li class="active"><a href="7_bootstrap.html">Bootstrap</a></li>
+            <li class="active"><a href="8_nedtrekkslister.html">Nedtrekkslister</a></li>
+            <li class="active"><a href="11_sql1.html">SQL 1</a></li>
+            <li><a href="12_sql2.html">SQL 2</a></li>
             <li><a href="9_datastrukturer.html">Datastrukturer</a></li>
             <li><a href="10_generiske_datatyper.html">Generiske datatyper</a></li>
-            <li><a href="11_sql1.html">SQL 1</a></li>
-            <li><a href="12_sql2.html">SQL 2</a></li>
             <li><a href="13_input_validering.html">Input validering</a></li>
             <li><a href="14_sesjoner.html">Sesjoner</a></li>
             <li><a href="15_sikkerhet.html">Sikkerhet</a></li>
-        </ol>
-        <ul>
-            <li>
-                <a href="index.html">Tilbake til introsiden</a>
-            </li>
         </ul>
     </nav>
 </header>
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
-                <h1 class="hovedoverskrift">Ukesoppgaver Spring 2</h1>
-                <h2 class="underoverskrift">Motorvognoppgave</h2>
+            <div class="col-md-12">
+                <h1>Ukesoppgaver Spring 2, Bootstrap, Nedtrekkslister og SQL 1</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Motorvognoppgave</h2>
                 <table class="table">
                     <tr class="active"><th>Eiers personnummer</th></tr>
                     <tr><td><input type="text" id="personnummer" class="form-control"></td></tr>
@@ -55,9 +55,6 @@
 
                     <tr class="active"><th>Reg nummer</th></tr>
                     <tr><td><input type="text" id="kjennetegn" class="form-control"></td></tr>
-
-                    <!--<tr class="active"><th>Bilmerke</th></tr>
-                    <tr><td><input type="text" id="merke" class="form-control"></td></tr>-->
 
                     <tr class="active"><th>Bilmerke</th></tr>
                     <tr><td><select type="text" id="merke" class="form-control" onclick="merkeSjekk()">
@@ -81,8 +78,8 @@
                 </table>
                 <button onclick="registrer()" class="btn btn-primary">Registrer</button>
             </div>
-            <div class="col-md-5">
-                <h2 class="underoverskrift">Bilregister</h2>
+            <div class="col-md-6">
+                <h2>Bilregister</h2>
                 <p id="bilregister"></p>
                 <button onclick="slett()" class="btn btn-danger">Slett alle</button>
             </div>
